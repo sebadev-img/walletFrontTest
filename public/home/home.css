@@ -1,0 +1,85 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #ededed;
+}
+
+header {
+  height: 64px;
+  background-color: #00b1ea;
+  color: white;
+}
+
+footer {
+  height: 71px;
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.info-container {
+  margin-top: 32px;
+}
+
+.actividad-container {
+  /*border: 1px solid blue;*/
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cuentas-container {
+  /*border: 1px solid blue;*/
+}
+
+.transaction-container {
+  border: 1px solid red;
+  height: 72px;
+}
+
+.account-container {
+  height: 245px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.account-header {
+  margin-top: 12px;
+  padding-left: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.account-balance {
+  margin-top: 6px;
+  margin-bottom: 2px;
+  padding-left: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.account-actions {
+  margin-top: 8px;
+}
+
+.account-btn {
+  padding: 2px 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e4f0f8;
+  color: #009ee3;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+
+.account-btn:hover {
+  opacity: 0.9;
+}
+
+.action-btn {
+  width: 160px;
+}
