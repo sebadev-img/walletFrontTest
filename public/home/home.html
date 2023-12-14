@@ -29,16 +29,22 @@
                 <div class="account-container">
                   <div class="row account-header">
                     <div class="row">
-                      <div class="col">Tu cuenta en Pesos</div>
+                      <div class="col-8"><h5>Tu cuenta en Pesos</h5></div>
                       <div class="col d-flex justify-content-end">
                         <button class="account-btn">Editar</button>
                       </div>
                     </div>
-                    <div class="row">CVU : 000000000001</div>
+                    <div class="row color-99 cvu">
+                      <div class="col">CVU : 000000000001</div>
+                    </div>
                   </div>
                   <div class="row account-balance">
-                    <div class="row">Dinero disponible:</div>
-                    <div class="row">$ 10.000,70</div>
+                    <div class="row color-99">
+                      <div class="col">Dinero disponible:</div>
+                    </div>
+                    <div class="row balance">
+                      <div class="col">AR$ 10.000,70</div>
+                    </div>
                   </div>
                   <div
                     class="row account-actions d-flex flex-column align-items-center justify-content-evenly"
@@ -62,22 +68,75 @@
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="account-container"></div>
+                <div class="account-container">
+                  <div class="row account-header">
+                    <div class="row">
+                      <div class="col-8">Tu cuenta en Dolares</div>
+                      <div class="col d-flex justify-content-end">
+                        <button class="account-btn">Editar</button>
+                      </div>
+                    </div>
+                    <div class="row">CVU : 000000000002</div>
+                  </div>
+                  <div class="row account-balance">
+                    <div class="row">Dinero disponible:</div>
+                    <div class="row">US$ 10.000,70</div>
+                  </div>
+                  <div
+                    class="row account-actions d-flex flex-column align-items-center justify-content-evenly"
+                  >
+                    <div class="col my-1">
+                      <button class="account-btn action-btn">
+                        Ingresar dinero
+                      </button>
+                    </div>
+                    <div class="col my-1">
+                      <button class="account-btn action-btn">
+                        Transferir dinero
+                      </button>
+                    </div>
+                    <div class="col my-1">
+                      <button class="account-btn action-btn">
+                        Hacer un pago
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="container actividad-container">
-              <h3>Tu Actividad - Listado de transactions:</h3>
+              <div class="row actividad-title"><h3>Tu Actividad</h3></div>
               <div class="container transaction-container aling-items-center">
                 <div class="row h-100">
                   <div class="col d-flex flex-column justify-content-center">
-                    <div class="row">Recibiste una Trasnferencia</div>
-                    <div class="row">De Nombre de Usuario</div>
+                    <div class="row color-33">Recibiste una Trasnferencia</div>
+                    <div class="row color-99">De Nombre de Usuario</div>
                   </div>
                   <div class="col d-flex flex-column justify-content-center">
-                    <div class="row d-flex justify-content-end">3000</div>
-                    <div class="row d-flex justify-content-end">Ayer</div>
+                    <div class="row d-flex justify-content-end color-33">
+                      3000
+                    </div>
+                    <div class="row d-flex justify-content-end color-99">
+                      Ayer
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container transaction-container aling-items-center">
+                <div class="row h-100">
+                  <div class="col d-flex flex-column justify-content-center">
+                    <div class="row color-33">Recibiste una Trasnferencia</div>
+                    <div class="row color-99">De Nombre de Usuario</div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center">
+                    <div class="row d-flex justify-content-end color-33">
+                      3000
+                    </div>
+                    <div class="row d-flex justify-content-end color-99">
+                      Ayer
+                    </div>
                   </div>
                 </div>
               </div>
@@ -117,16 +176,11 @@
                   </div>
                 </div>
               </div>
-              <div class="container transaction-container aling-items-center">
-                <div class="row h-100">
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row">Recibiste una Trasnferencia</div>
-                    <div class="row">De Nombre de Usuario</div>
-                  </div>
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row d-flex justify-content-end">3000</div>
-                    <div class="row d-flex justify-content-end">Ayer</div>
-                  </div>
+              <div class="row">
+                <div
+                  class="col d-flex justify-content-center btn-mas-container"
+                >
+                  <button class="btn-mas">Ver mas</button>
                 </div>
               </div>
             </div>
