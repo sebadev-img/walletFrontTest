@@ -16,12 +16,21 @@ btnRegister.addEventListener("click", async (e) => {
   if (firstName && lastName && emailRegExp.test(email) && password) {
     e.preventDefault();
     console.log(firstName, lastName, email, password);
-    const response = await axios.post("/registerUser", {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password
-    });
-    console.log(response.data);
+    try {
+      const response = await axios.post("/registerUser", {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password
+      });
+      console.log(response.data);
+      if (response.data.token) {
+        sessionStorage.setItem("token", "Bearer " + response.data.token);
+        console.log(sessionStorage.getItem("token"));
+        window.open("http://localhost:3000/home", "_self");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 });

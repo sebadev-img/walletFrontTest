@@ -12,10 +12,19 @@ btnLogin.addEventListener("click", async (e) => {
   if (emailRegExp.test(userEmail) && userPassword) {
     e.preventDefault();
     console.log(userEmail, userPassword);
-    const response = await axios.post("/loginUser", {
-      userEmail: userEmail,
-      userPassword: userPassword
-    });
-    console.log(response.data);
+    try {
+      const response = await axios.post("/loginUser", {
+        userEmail: userEmail,
+        userPassword: userPassword
+      });
+      console.log(response.data);
+      if (response.data.token) {
+        sessionStorage.setItem("token", "Bearer " + response.data.token);
+        console.log(sessionStorage.getItem("token"));
+        window.open("http://localhost:3000/home", "_self");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 });
