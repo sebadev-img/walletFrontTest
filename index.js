@@ -33,7 +33,7 @@ app.post("/loginUser", async (req, res) => {
       email: data.userEmail,
       password: data.userPassword
     });
-    console.log(response);
+    //console.log(response);
     res.json(response);
   } catch (error) {
     console.log(error);
@@ -65,8 +65,8 @@ app.post("/registerUser", async (req, res) => {
       );
       console.log(loginResponse);
       // crear las cuentas del usuario
-      if (loginResponse.token) {
-        const token = loginResponse.token;
+      if (loginResponse.jwt) {
+        const token = loginResponse.jwt;
         const arsURL = API_URL + "/accounts?currency=ARS";
         const usdURL = API_URL + "/accounts?currency=USD";
         try {
@@ -82,6 +82,22 @@ app.post("/registerUser", async (req, res) => {
     } catch (error) {
       console.log(error);
     }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.post("/userAccounts", async (req, res) => {
+  const data = req.body;
+  console.log(data);
+  const userId = data.userId;
+  const token = data.token;
+  const accountURL = API_URL + `/accounts/${userId}`;
+  try {
+    console.log("Haciendo un fetch a: " + accountURL);
+    const response = await fetchData(accountURL, token);
+    console.log(response);
+    res.json(response);
   } catch (error) {
     console.log(error);
   }

@@ -29,13 +29,17 @@
                 <div class="account-container">
                   <div class="row account-header">
                     <div class="row">
-                      <div class="col-8"><h5>Tu cuenta en Pesos</h5></div>
+                      <div class="col-8">
+                        <h5 id="accountArs-Title">Tu cuenta en Pesos</h5>
+                      </div>
                       <div class="col d-flex justify-content-end">
                         <button class="account-btn">Editar</button>
                       </div>
                     </div>
                     <div class="row color-99 cvu">
-                      <div class="col">CVU : 000000000001</div>
+                      <div class="col" id="accountArs-CVU">
+                        CVU : 000000000001
+                      </div>
                     </div>
                   </div>
                   <div class="row account-balance">
@@ -43,7 +47,9 @@
                       <div class="col">Dinero disponible:</div>
                     </div>
                     <div class="row balance">
-                      <div class="col">AR$ 10.000,70</div>
+                      <div class="col" id="accountArs-Balance">
+                        AR$ 10.000,70
+                      </div>
                     </div>
                   </div>
                   <div
@@ -190,6 +196,6 @@
     </main>
     <footer></footer>
   </body>
-  <script src="../home/home.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../home/home.js"></script>
 </html>

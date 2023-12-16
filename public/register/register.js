@@ -24,8 +24,12 @@ btnRegister.addEventListener("click", async (e) => {
         password: password
       });
       console.log(response.data);
-      if (response.data.token) {
-        sessionStorage.setItem("token", "Bearer " + response.data.token);
+      if (response.data.jwt) {
+        sessionStorage.setItem("token", response.data.jwt);
+        sessionStorage.setItem("userId", response.data.userId);
+        sessionStorage.setItem("firstName", response.data.firstName);
+        sessionStorage.setItem("lastName", response.data.lastName);
+        sessionStorage.setItem("email", response.data.userEmail);
         console.log(sessionStorage.getItem("token"));
         window.open("http://localhost:3000/home", "_self");
       }
