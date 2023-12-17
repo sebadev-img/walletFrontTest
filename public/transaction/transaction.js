@@ -35,7 +35,7 @@ const createNode = (transaction) => {
         <td>${transaction.type}</td>
         <td>$${transaction.amount}</td>
         <td>${transaction.description}</td>
-        <td>${transaction.transactionDate}</td>
+        <td>${getDate(transaction.transactionDate)}</td>
     `;
   return node;
 };
@@ -48,6 +48,16 @@ const createPagination = (response) => {
     node.innerHTML = `<button class="page-link color-blue" onclick="getTransactions(${i})">${i}</button>`;
     pagination.appendChild(node);
   }
+};
+
+const getDate = (transactionDate) => {
+  const date = transactionDate.slice(0, 10);
+  const dateComponents = date.split("-");
+  const d = dateComponents[2];
+  const m = dateComponents[1];
+  const y = dateComponents[0];
+  const time = transactionDate.slice(11, 19);
+  return d + "-" + m + "-" + y + " " + time;
 };
 
 getTransactions(1);

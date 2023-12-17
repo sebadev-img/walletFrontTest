@@ -4,6 +4,11 @@ const accountArsBalance = document.getElementById("accountArs-Balance");
 const accountUsdCVU = document.getElementById("accountUsd-CVU");
 const accountUsdBalance = document.getElementById("accountUsd-Balance");
 const transactionList = document.getElementById("transaction-list");
+const btnMas = document.getElementById("btn-mas");
+
+btnMas.addEventListener("click", () => {
+  window.open("http://localhost:3000/transactions", "_self");
+});
 
 const getAccounts = async () => {
   const userId = sessionStorage.getItem("userId");
@@ -42,7 +47,8 @@ const getTransactions = async () => {
     try {
       const response = await axios.post("/userTransactions", {
         userId: userId,
-        token: token
+        token: token,
+        page: 1
       });
       console.log(response.data.results);
       const transactions = response.data.results;
