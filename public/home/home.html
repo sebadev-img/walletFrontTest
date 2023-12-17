@@ -30,15 +30,16 @@
                   <div class="row account-header">
                     <div class="row">
                       <div class="col-8">
-                        <h5 id="accountArs-Title">Tu cuenta en Pesos</h5>
+                        <h5 id="accountArs-Title">Cuenta en Pesos</h5>
                       </div>
                       <div class="col d-flex justify-content-end">
                         <button class="account-btn">Editar</button>
                       </div>
                     </div>
                     <div class="row color-99 cvu">
-                      <div class="col" id="accountArs-CVU">
-                        CVU : 000000000001
+                      <div class="col">
+                        <span>CVU :</span>
+                        <span id="accountArs-CVU">000000000000</span>
                       </div>
                     </div>
                   </div>
@@ -47,8 +48,9 @@
                       <div class="col">Dinero disponible:</div>
                     </div>
                     <div class="row balance">
-                      <div class="col" id="accountArs-Balance">
-                        AR$ 10.000,70
+                      <div class="col">
+                        <span>AR$ </span
+                        ><span id="accountArs-Balance">10.000,70</span>
                       </div>
                     </div>
                   </div>
@@ -77,16 +79,30 @@
                 <div class="account-container">
                   <div class="row account-header">
                     <div class="row">
-                      <div class="col-8">Tu cuenta en Dolares</div>
+                      <div class="col-8">
+                        <h5 id="accountArs-Title">Cuenta en Dolares</h5>
+                      </div>
                       <div class="col d-flex justify-content-end">
                         <button class="account-btn">Editar</button>
                       </div>
                     </div>
-                    <div class="row">CVU : 000000000002</div>
+                    <div class="row color-99 cvu">
+                      <div class="col">
+                        <span>CVU :</span>
+                        <span id="accountUsd-CVU">000000000000</span>
+                      </div>
+                    </div>
                   </div>
                   <div class="row account-balance">
-                    <div class="row">Dinero disponible:</div>
-                    <div class="row">US$ 10.000,70</div>
+                    <div class="row color-99">
+                      <div class="col">Dinero disponible:</div>
+                    </div>
+                    <div class="row balance">
+                      <div class="col">
+                        <span>US$ </span
+                        ><span id="accountUsd-Balance">10.000,70</span>
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="row account-actions d-flex flex-column align-items-center justify-content-evenly"
@@ -114,74 +130,7 @@
           <div class="col">
             <div class="container actividad-container">
               <div class="row actividad-title"><h3>Tu Actividad</h3></div>
-              <div class="container transaction-container aling-items-center">
-                <div class="row h-100">
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row color-33">Recibiste una Trasnferencia</div>
-                    <div class="row color-99">De Nombre de Usuario</div>
-                  </div>
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row d-flex justify-content-end color-33">
-                      3000
-                    </div>
-                    <div class="row d-flex justify-content-end color-99">
-                      Ayer
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container transaction-container aling-items-center">
-                <div class="row h-100">
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row color-33">Recibiste una Trasnferencia</div>
-                    <div class="row color-99">De Nombre de Usuario</div>
-                  </div>
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row d-flex justify-content-end color-33">
-                      3000
-                    </div>
-                    <div class="row d-flex justify-content-end color-99">
-                      Ayer
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container transaction-container aling-items-center">
-                <div class="row h-100">
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row">Recibiste una Trasnferencia</div>
-                    <div class="row">De Nombre de Usuario</div>
-                  </div>
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row d-flex justify-content-end">3000</div>
-                    <div class="row d-flex justify-content-end">Ayer</div>
-                  </div>
-                </div>
-              </div>
-              <div class="container transaction-container aling-items-center">
-                <div class="row h-100">
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row">Recibiste una Trasnferencia</div>
-                    <div class="row">De Nombre de Usuario</div>
-                  </div>
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row d-flex justify-content-end">3000</div>
-                    <div class="row d-flex justify-content-end">Ayer</div>
-                  </div>
-                </div>
-              </div>
-              <div class="container transaction-container aling-items-center">
-                <div class="row h-100">
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row">Recibiste una Trasnferencia</div>
-                    <div class="row">De Nombre de Usuario</div>
-                  </div>
-                  <div class="col d-flex flex-column justify-content-center">
-                    <div class="row d-flex justify-content-end">3000</div>
-                    <div class="row d-flex justify-content-end">Ayer</div>
-                  </div>
-                </div>
-              </div>
+              <div class="row container mt-2" id="transaction-list"></div>
               <div class="row">
                 <div
                   class="col d-flex justify-content-center btn-mas-container"

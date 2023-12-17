@@ -23,6 +23,10 @@ app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/public/home/home.html");
 });
 
+app.get("/transactions", (req, res) => {
+  res.sendFile(__dirname + "/public/transaction/transaction.html");
+});
+
 app.post("/loginUser", async (req, res) => {
   try {
     const data = req.body;
@@ -96,6 +100,23 @@ app.post("/userAccounts", async (req, res) => {
   try {
     console.log("Haciendo un fetch a: " + accountURL);
     const response = await fetchData(accountURL, token);
+    console.log(response);
+    res.json(response);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.post("/userTransactions", async (req, res) => {
+  const data = req.body;
+  console.log(data);
+  const userId = data.userId;
+  const token = data.token;
+  const page = data.page;
+  const transactionsURL = API_URL + `/transactions?user=${userId}&page=${page}`;
+  try {
+    console.log("Haciendo un fetch a: " + transactionsURL);
+    const response = await fetchData(transactionsURL, token);
     console.log(response);
     res.json(response);
   } catch (error) {
